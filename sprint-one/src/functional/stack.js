@@ -12,14 +12,14 @@ var Stack = function() {
   };
 
   someInstance.pop = function() {
-  count--;
-  return storage[count];
+    count--;
+    return storage[count];
   };
 
-    someInstance.size = function() {
+  someInstance.size = function() {
     if (count < 0) {
-    return 0;
-  }
+      return 0;
+    }
     return count;
   };
 
