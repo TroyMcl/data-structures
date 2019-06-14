@@ -11,7 +11,7 @@ var Queue = function() {
 var queueMethods = {
   enqueue(value) {
     this.storage[this.key] = value;
-    this.key++
+    this.key++;
   },
   dequeue() {
     var current = this.storage[this.que];
