@@ -11,17 +11,17 @@ var Queue = function() {
 };
 
 var queueMethods = {
-  enqueue(value){
+  enqueue(value) {
     this.storage[this.key] = value;
-    this.key++
+    this.key++;
   },
-  dequeue(){
+  dequeue() {
     var current = this.storage[this.que];
     delete this.storage[this.que];
     this.que++;
     return current;
   },
-  size(){
+  size (){
     return Object.keys(this.storage).length;
   }
 };
