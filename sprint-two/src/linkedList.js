@@ -4,12 +4,12 @@ var LinkedList = function() {
   list.tail = null;
 
   list.addToTail = function(value) {
-    var current = Node(value)
+    var current = Node(value);
 
-    if(this.head === null) {
-      this.head = current
+    if (this.head === null) {
+      this.head = current;
     }
-    if(this.tail === null) {
+    if (this.tail === null) {
       this.tail = current;
     } else {
       this.tail.next = current;
@@ -24,14 +24,14 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
-  var node = this.head;
-  while (node) {
-    if(node.value === target) {
-      return true;
+    var node = this.head;
+    while (node) {
+      if (node.value === target) {
+        return true;
+      }
+      node = node.next;
     }
-    node = node.next;
-  }
-  return false;
+    return false;
 
   };
 
@@ -49,4 +49,6 @@ var Node = function(value) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ removehead and addtotail are O(1) linear time complexity
+ worst case is for contains O(n) linear time complexity
  */
