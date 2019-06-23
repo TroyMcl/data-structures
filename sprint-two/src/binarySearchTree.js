@@ -44,7 +44,7 @@ BinarySearchTree.methods = {
       } else if (node.value > value) {
         traverseNode(value, node.left);
       }
-    }
+    };
     traverseNode(value, this);
     return hasNode;
   },

@@ -10,13 +10,15 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
-  this._storage.push(item);
+  if(!this.contains(item)) {
+    this._storage.push(item);
+  }
 };
 
 setPrototype.contains = function(item) {
   var arr = this._storage;
   for (var i = 0; i < arr.length; i++) {
-    if(arr[i]=== item) {
+    if(arr[i] === item) {
       return true;
     }
   }
