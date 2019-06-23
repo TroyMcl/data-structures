@@ -22,13 +22,13 @@ describe('tree', function() {
   });
 
   it('should return false for a value that was not added', function() {
-    tree.addChild(5);
+    tree.addChild(5);// this refers here tree
     expect(tree.contains(6)).to.equal(false);
   });
 
   it('should be able to add children to a tree\'s child', function() {
     tree.addChild(5);
-    tree.children[0].addChild(6);
+    tree.children[0].addChild(6);// this refers here tree.children[0]
     expect(tree.children[0].children[0].value).to.equal(6);
   });
 
